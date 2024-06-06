@@ -1,0 +1,15 @@
+body {
+    font-family: "Arial, Helvetica, Arial";
+    background: url("imagenes/colorclarito.jpg");
+}
+
+h1 {
+    color: red;
+    text-align: center;
+
+
+}
+
+.precio {
+    color: darkgreen
+}
