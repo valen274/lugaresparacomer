@@ -1,10 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rancho&display=swap');
+
 body {
-    font-family: "Arial, Helvetica, Arial";
+    font-family: "Patrick Hand", cursive;
+
     background: url("imagenes/colorclarito.jpg");
 }
 
 h1 {
-    color: red;
+    color: rgb(219, 101, 156);
     text-align: center;
 
 
@@ -12,4 +17,49 @@ h1 {
 
 .precio {
     color: darkgreen
+}
+
+@media (width>=800px) {
+    .Restaurantes {
+        display: grid;
+        grid-template-columns: auto auto auto;
+    }
+}
+
+@media (width<800px) {
+    .Restaurantes {
+        display: grid;
+        grid-template-columns: auto;
+    }
+}
+
+
+.Restaurantes img {
+    width: 80%;
+}
+
+h4 {
+    color: rgb(173, 112, 96);
+}
+
+ol img {
+    width: 400px;
+    height: 250px;
+}
+
+.principal {
+    background-image: url("imagenes/fondosinletra.png");
+
+    background-size: cover;
+}
+
+.principal a {
+    size: 20px;
+    padding: 20px;
+    margin-left: 50%;
+    margin-top: 200px;
+    font-family: "Rancho", cursive;
+    text-decoration: none;
+    background-color: rgba(179, 92, 30, 0.418);
+
 }
