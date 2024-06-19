@@ -5,14 +5,19 @@
 body {
     font-family: "Patrick Hand", cursive;
 
-    background: url("imagenes/colorclarito.jpg");
+    background-color: #f8e4ba;
 }
 
 h1 {
-    color: rgb(219, 101, 156);
+    color: #f075aa;
     text-align: center;
+    font-size: 3em;
 
 
+}
+
+h3 {
+    font-size: 220%;
 }
 
 .precio {
@@ -30,12 +35,14 @@ h1 {
     .Restaurantes {
         display: grid;
         grid-template-columns: auto;
+
     }
 }
 
 
 .Restaurantes img {
     width: 80%;
+
 }
 
 h4 {
@@ -53,94 +60,35 @@ ol img {
     background-size: cover;
 }
 
-.principal a {
-    size: 20px;
-    padding: 20px;
-    margin-left: 50%;
-    margin-top: 200px;
-    font-family: "Rancho", cursive;
-    text-decoration: none;
-    background-color: rgba(179, 92, 30, 0.418);
-
+.grid-container {
+    column-count: 6;
 }
 
-.wrapper {
-    max-width: 1200px;
-    position: relative;
-
+.grid-container img {
+    filter: drop-shadow(2px 2px 3px grey);
+    width: 80%;
 }
 
-.wrapper i {
-    top: 50%;
-    background: #fff;
-    height: 46px;
-    width: 46px;
-    position: absolute;
-    font-size: 1.2rem;
-    cursor: pointer;
+.contenedor a {
+    background-color: #ccb150;
     text-align: center;
-    line-height: 46px;
-    border-radius: 50%;
-    transform: translateY('-50%');
-}
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 10px;
+    color: black;
 
-.wrapper i:first-child {
-    left: -23px;
-}
-
-.wrapper i:last-child {
-    right: -23px;
-    display: none;
 
 }
 
-body.listacarrusel {
-    /*display: flex;*/
-    padding: 0 35px;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
-}
+.tituloprincipal {
+    font-size: 5em;
+    color: black;
+    margin-top: 200px;
 
-.wrapper .carrusel {
-    font-size: 0px;
-    cursor: pointer;
-    white-space: nowrap;
-    overflow: hidden;
-    white-space: nowrap;
-    scroll-behavior: smooth;
-}
-
-.carrusel.dragging {
-    cursor: grab;
-    scroll-behavior: auto;
-}
-
-.carrusel.dragging img {
-    pointer-events: none;
-}
-
-.carrusel img {
-    height: 100px;
-    width: 100px;
-    width: calc(100% / 3);
-    margin-left: 14px;
-    width: calc(100%/3)
-}
-
-.carrusel img :first-child {
-    margin-left: 0px;
 
 }
 
-@media screen and (max-width:900px) {
-    .carrusel img {
-        width: calc(50% / 2);
-    }
-}
+.contenedor {
+    text-align: center;
 
-@media screen and (max-width:550px) {
-    .carrusel img {
-        width: 50%;
-    }
 }
