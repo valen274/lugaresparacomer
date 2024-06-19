@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="funciones.js"></script>
+    <meta
+      name="viewport"
+      content="width=device-width,user-scalable=si, initial-scale=1"
+    />
+    <link type="text/css" href="estilos.css" rel="stylesheet" />
+  </head>
+  <body>
+    <h1>Dulce Armonia</h1>
+    <ol>
+      <h2>¡¡¡OPCIONES!!!</h2>
+      <label for="presupuesto"> :presupuesto </label>
+      <input
+        type="number"
+        id="presupuesto"
+        value="1000"
+        step="100"
+        onchange="mostrarmenu(this.value)"
+      />
+      <div id="pizzamargarita">
+        <h4>PIZZA MARGARITA</h4>
+        <img src="imagenes/pizzamargarita.jpg" />
+        <p class="precio">precio = $8400</p>
+      </div>
+      <div id="pizzapiña">
+        <h4>PIZZA DE PIÑA</h4>
+
+        <img src="imagenes/pizzapiña.jpg" />
+        <p class="precio">precio = $9300</p>
+      </div>
+      <div id="pizzahongos">
+        <h4>PIZZA DE HONGOS</h4>
+        <img src="imagenes/pizzahongos.jpg" />
+        <p class="precio">precio = $10900</p>
+      </div>
+    </ol>
+  </body>
+</html>

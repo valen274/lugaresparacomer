@@ -15,59 +15,20 @@ function mostrarmenu(precio) {
     tostada.style.display= "block"
    } else {tostada.style.display="none"}
 }
+function mostrarmenu(precio) {
+    const pizzamargarita=document.getElementById("pizzamargarita");
+    const pizzapiña=document.getElementById("pizzapiña");
+    const pizzahongos=document.getElementById("pizzahongos");
 
-const carrusel = document.querySelector(".carrusel"),
-FirstImg= carrusel.querySelectorAll("img") [0];
-arrowIcons = document.querySelectorAll(".wrapper.i");
+   if (precio>=8400){
+    pizzamargarita.style.display= "block"
+   } else {pizzamargarita.style.display="none"}
 
-let isDragStart=false,prevPageX, prevScrollLeft;
+   if (precio>=9300){
+    pizzapiña.style.display= "block"
+   } else {pizzapiña.style.display="none"}
 
-
-
-const showHideIcons =() => {
-    //showing and hiding prev/next icon according to carrusel scroll left value
-    let scrollWidth= carrusel.scrollWidth - carrusel.clientWidth;//getting max scrollable width
-    arrowIcons[0].style.display = carrusel.scrollLeft == 0 ? "none" : "block";
-    arrowIcons[1].style.display = carrusel.scrollLeft == scrollWidth ? "none" : "block";
-
+   if (precio>=10900){
+    pizzahongos.style.display= "block"
+   } else {tpizzahongos.style.display="none"}
 }
-
-
-arrowIcons.forEach(icon => {
-icon.addEventListener("click",() =>{
-    let FirstImgWidth= FirstImg.clientWidth + 14; //getting first img width & adding 14 margin value
-    //if clicked icon is left, reduce width value from the carrusel scroll left else add to id
-carrusel.ScrollLeft += icon.id == "left" ? - FirstImgWidth : FirstImgWidth;
-setTimeout(() =>showHideIcons(),60); //calling showHideIcons after 60ms
-});
-});
-
-const DragStart = (e) => {
-    //updating global variables value on mouse down event
-    isDragStart= true;
-    prevPageX= e.pageX | | e.touched[0].pageX;
-    prevScrollLeft= carrusel.scrollLeft;
-}
-
-const dragging= (e) => {
-    //scrolling images/carrusel to left according to mouse pointer
-    if (!isDragStart) return;
-    e.preventDefault ();
-    carrusel.classList.add("dragging");
-    let positionDiff= (e.pageX | | e.touched[0].pageX)- prevPageX;
-  carrusel.scrollLeft= prevScrollLeft - positionDiff ;
-  showHideIcons();
-} 
-const dragStop = () => {
-    isDragStart= false;
-    carrusel.classList.remove("dragging");
-}
-carrusel.addEventListener("mousedown", DragStart);
-carrusel.addEventListener("touchstart", DragStart);
-
-carrusel.addEventListener("mousemove", dragging);
-carrusel.addEventListener("touchmove", dragging);
-
-carrusel.addEventListener("mouseup", dragStop);
-carrusel.addEventListener("mouseleave", dragStop);
-carrusel.addEventListener("touchend", dragStop);
